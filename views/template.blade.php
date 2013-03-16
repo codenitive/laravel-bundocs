@@ -23,9 +23,13 @@
 			<aside class="sidebar">
 				{{ $sidebar }}
 			</aside>
-			<div class="content">
+			<section class="content">
 				@yield('content')
-			</div>
+				<footer>
+					<p>Style fork from <a href="http://github.com/daylerees/docs-reader" title="Documentation reader by Dayle Rees.">Docs reader</a> by <a href="http://daylerees.com" title="Dayle Rees">Dayle Rees</a>.</p>
+                </footer>
+			</section>
+			<div class="clearfix"></div>
 		</div>
 	</div>
 
