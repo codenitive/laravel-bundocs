@@ -6,17 +6,18 @@
 	<title>Laravel: A Framework For Web Artisans</title>
 	<meta name="viewport" content="width=device-width">
 
-	{{ HTML::style(URL::$base.'/laravel/css/style.css') }}
-	{{ HTML::script(URL::$base.'/laravel/js/modernizr-2.5.3.min.js') }}
+	{{ HTML::style('bundles/bundocs/css/style.css') }}
+	{{ HTML::script('bundles/bundocs/js/vendor/modernizr-2.6.2.min.js') }}
 </head>
-<body onload="prettyPrint()">
+<body>
+	<!--[if lt IE 7]>
+		<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+	<![endif]-->
 	<div class="wrapper">
 		<header>
-			<h1>{{ Str::title($bundle) }}</h1>
-			<h2>Laravel Bundle Documentation</h2>
-
-			<p class="intro-text">
-			</p>
+			<h1>
+				{{ Str::title($bundle) }}
+			</h1>
 		</header>
 		<div role="main" class="main">
 			<aside class="sidebar">
@@ -27,8 +28,11 @@
 			</div>
 		</div>
 	</div>
-	{{ HTML::script('http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js') }}
-	{{ HTML::script(URL::$base.'/laravel/js/prettify.js') }}
-	{{ HTML::script(URL::$base.'/laravel/js/scroll.js') }}
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="{{ URL::to_asset('bundles/bundocs/js/vendor/jquery-1.8.2.min.js') }}"><\/script>')</script>
+	<script src="{{ URL::to_asset('bundles/bundocs/js/vendor/prettify.js') }}"></script>
+	<script src="{{ URL::to_asset('bundles/bundocs/js/plugins.js') }}"></script>
+	<script src="{{ URL::to_asset('bundles/bundocs/js/main.js') }}"></script>
 </body>
 </html>
