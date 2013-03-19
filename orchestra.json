@@ -4,7 +4,7 @@
 	"author"      : "Mior Muhammad Zaki",
 	"url"         : "http://bundles.laravel.com/bundle/bundocs",
 	"repository"  : "https://github.com/orchestral/bundocs",
-	"version"     : "0.1.1",
+	"version"     : "1.0.0",
 	"config"      : {
 		"handles"      : "bundocs",
 		"configurable" : false
